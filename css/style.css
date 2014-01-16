@@ -1,0 +1,55 @@
+@import url(reset.css);
+
+body {
+    margin: 50px 50px;
+    font-size: 12px;
+    font-family: Arial, sans-serif; /*Monospace;*/
+    color: #000;
+    background: #fff;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+.my-table {
+    margin: 15px 0;
+}
+
+thead {
+    background: #eee;
+    border-bottom: 2px solid #999;
+}
+
+td, th {
+    padding: 10px 15px;
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+    vertical-align: middle;
+}
+
+.input-number, .input-number2 {
+    width: 55px;
+    height: 25px;
+    border: 1px solid #ccc;
+    text-align: center;
+    padding: 2px 0;
+}
+
+.input-number2 {
+    width: 80px;
+}
+
+.calculate-button {
+    margin-top: 15px;
+}
+
+abbr[title] {
+    cursor: help;
+}
+
+sub {
+    font-size: 0.6em;
+    vertical-align: bottom;
+    margin-left: 2px;
+}

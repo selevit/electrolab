@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Автоматический расчет лабы 3(э) по электротехнике</title>
+        <link rel="stylesheet" href="./css/style.css">
+        <script src="./js/main.js"></script>
+    </head>
+    <body>
+        <table class="my-table">
+            <thead>
+                <tr>
+                    <th>Элемент</th>
+                    <th>Номинальные значения</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>R, Ом</td>
+                    <td><input id="R-max" step="1" type="number" value="220" class="input-number2"></td>
+                </tr>
+                <tr>
+                    <td>R<sub>K</sub>, Ом</td>
+                    <td><input id="Rk-max" step="1" type="number" value="188.6" class="input-number2"></td>
+                </tr>
+                <tr>
+                    <td>L, <abbr title="Генри">Гн</abbr></td>
+                    <td><input id="L-max" step="0.050" type="number" value="0.100" class="input-number2"></td>
+                </tr>
+                <tr>
+                    <td>C, <abbr title="Фарад">Ф</abbr></td>
+                    <td><input id="C-max" step="0.000001" type="number" value="0.000001" class="input-number2"></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table class="my-table">
+            <thead>
+                <tr>
+                    <th rowspan="2">X<sub>C</sub></th>
+                    <th rowspan="2">X<sub>C</sub></th>
+                    <th rowspan="2">X<sub>C</sub></th>
+                    <th rowspan="2">X<sub>C</sub></th>
+                    <th rowspan="2">X<sub>C</sub></th>
+                    <th rowspan="2">X<sub>C</sub></th>
+
+                    <th rowspan="2">R</th>
+                    <th rowspan="2">X<sub>C</sub></th>
+                    <th rowspan="2">X<sub>K</sub></th>
+                    <th rowspan="2">Z</th>
+                    <th rowspan="2">cos φ</th>
+                    <th colspan="3">Мощности</th>
+                </tr>
+                <tr>
+                    <th>P</th>
+                    <th>Q</th>
+                    <th>S</th>
+                </tr>
+                <tr>
+
+                    <th><abbr title="Генри">Гн</abbr></th>
+                    <th><abbr title="Милиампер">мА</abbr></th>
+                    <th><abbr title="Вольт">В</abbr></th>
+                    <th><abbr title="Вольт">В</abbr></th>
+                    <th><abbr title="Вольт">В</abbr></th>
+                    <th><abbr title="Вольт">В</abbr></th>
+
+                    <th>Ом</th>
+                    <th>Ом</th>
+                    <th>Ом</th>
+                    <th>Ом</th>
+                    <th>—</th>
+                    <th><abbr title="Ватт">Вт</abbr></th>
+                    <th>вар</th>
+                    <th>ВА</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input step="0.01" class="input-number" type="number" value="200"></td>
+                    <td><input step="0.01" class="input-number" type="number" value="7.2"></td>
+                    <td><input step="0.01" class="input-number" type="number" value="5"></td>
+                    <td><input step="0.01" class="input-number" type="number" value="1.51"></td>
+                    <td><input step="0.01" class="input-number" type="number" value="2.56"></td>
+                    <td><input step="0.01" class="input-number" type="number" value="4.85"></td>
+                    <td class="solution">&nbsp;</td>
+                    <td class="solution">&nbsp;</td>
+                    <td class="solution">&nbsp;</td>
+                    <td class="solution">&nbsp;</td>
+                    <td class="solution">&nbsp;</td>
+                    <td class="solution">&nbsp;</td>
+                    <td class="solution">&nbsp;</td>
+                    <td class="solution">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td><input step="0.01" class="input-number" type="number" value="330"></td>
+                    <td><input step="0.01" class="input-number" type="number" value="10.28"></td>
+                    <td><input step="0.01" class="input-number" type="number" value="5"></td>
+                    <td><input step="0.01" class="input-number" type="number" value="2.22"></td>
+                    <td><input step="0.01" class="input-number" type="number" value="2.84"></td>
+                    <td><input step="0.01" class="input-number" type="number" value="4.29"></td>
+                    <td class="solution">&nbsp;</td>
+                    <td class="solution">&nbsp;</td>
+                    <td class="solution">&nbsp;</td>
+                    <td class="solution">&nbsp;</td>
+                    <td class="solution">&nbsp;</td>
+                    <td class="solution">&nbsp;</td>
+                    <td class="solution">&nbsp;</td>
+                    <td class="solution">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td><input step="0.01" class="input-number" type="number" value="460"></td>
+                    <td><input step="0.01" class="input-number" type="number" value="11.41"></td>
+                    <td><input step="0.01" class="input-number" type="number" value="5"></td>
+                    <td><input step="0.01" class="input-number" type="number" value="2.56"></td>
+                    <td><input step="0.01" class="input-number" type="number" value="4.10"></td>
+                    <td><input step="0.01" class="input-number" type="number" value="3.43"></td>
+                    <td class="solution">&nbsp;</td>
+                    <td class="solution">&nbsp;</td>
+                    <td class="solution">&nbsp;</td>
+                    <td class="solution">&nbsp;</td>
+                    <td class="solution">&nbsp;</td>
+                    <td class="solution">&nbsp;</td>
+                    <td class="solution">&nbsp;</td>
+                    <td class="solution">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td><input step="0.01" class="input-number" type="number" value="590"></td>
+                    <td><input step="0.01" class="input-number" type="number" value="10.87"></td>
+                    <td><input step="0.01" class="input-number" type="number" value="5"></td>
+                    <td><input step="0.01" class="input-number" type="number" value="2.41"></td>
+                    <td><input step="0.01" class="input-number" type="number" value="4.58"></td>
+                    <td><input step="0.01" class="input-number" type="number" value="2.58"></td>
+                    <td class="solution">&nbsp;</td>
+                    <td class="solution">&nbsp;</td>
+                    <td class="solution">&nbsp;</td>
+                    <td class="solution">&nbsp;</td>
+                    <td class="solution">&nbsp;</td>
+                    <td class="solution">&nbsp;</td>
+                    <td class="solution">&nbsp;</td>
+                    <td class="solution">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td><input step="0.01" class="input-number" type="number" value="720"></td>
+                    <td><input step="0.01" class="input-number" type="number" value="9.68"></td>
+                    <td><input step="0.01" class="input-number" type="number" value="5"></td>
+                    <td><input step="0.01" class="input-number" type="number" value="2.17"></td>
+                    <td><input step="0.01" class="input-number" type="number" value="4.85"></td>
+                    <td><input step="0.01" class="input-number" type="number" value="1.87"></td>
+                    <td class="solution">&nbsp;</td>
+                    <td class="solution">&nbsp;</td>
+                    <td class="solution">&nbsp;</td>
+                    <td class="solution">&nbsp;</td>
+                    <td class="solution">&nbsp;</td>
+                    <td class="solution">&nbsp;</td>
+                    <td class="solution">&nbsp;</td>
+                    <td class="solution">&nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+        <button id="calculate" class="calculate-button" type="button">Рассчитать</button>
+    </body>
+</html>
