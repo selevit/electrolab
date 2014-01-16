@@ -167,6 +167,7 @@ var main = (function () {
         var solution_cells = document.querySelectorAll('.solution');
         var solution_matr = this.separate_solution_cells_by_rows(solution_cells);
         for (var i = 0; i < solution_matr.length; i++) {
+            // Округляем отображаемые значение до 3-х знаков после запятой
             solution_matr[i][0].innerHTML = full_solution[i].R.toFixed(3);
             solution_matr[i][1].innerHTML = full_solution[i].Xc.toFixed(3);
             solution_matr[i][2].innerHTML = full_solution[i].Xl.toFixed(3);
@@ -175,6 +176,16 @@ var main = (function () {
             solution_matr[i][5].innerHTML = full_solution[i].P.toFixed(3);
             solution_matr[i][6].innerHTML = full_solution[i].Q.toFixed(3);
             solution_matr[i][7].innerHTML = full_solution[i].S.toFixed(3);
+
+            // Более точные значения подставляем в title
+            solution_matr[i][0].title = full_solution[i].R.toFixed(10);
+            solution_matr[i][1].title = full_solution[i].Xc.toFixed(10);
+            solution_matr[i][2].title = full_solution[i].Xl.toFixed(10);
+            solution_matr[i][3].title = full_solution[i].Z.toFixed(10);
+            solution_matr[i][4].title = full_solution[i].cos_fi.toFixed(10);
+            solution_matr[i][5].title = full_solution[i].P.toFixed(10);
+            solution_matr[i][6].title = full_solution[i].Q.toFixed(10);
+            solution_matr[i][7].title = full_solution[i].S.toFixed(10);
         }
     };
 
