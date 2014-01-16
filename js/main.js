@@ -115,9 +115,8 @@ var main = (function () {
         this.get_Q = function ()
         {
             var cos_fi = this.get_cos_fi(),
-                cos_2_fi = Math.pow(cos_fi, 2),
-                sin_2_fi = 1 - cos_2_fi;
-            return Math.sqrt(sin_2_fi);
+                fi = Math.acos(cos_fi);
+            return Math.sin(fi);
         };
 
         var result = {
