@@ -82,7 +82,7 @@ var main = (function () {
 
         this.get_Xc = function ()
         {
-            return 1/ (2 * Math.PI * this.data.f * this.c);
+            return 1.0 / (2 * Math.PI * this.data.f * this.c);
         };
 
         this.get_Xl = function ()
@@ -92,7 +92,7 @@ var main = (function () {
 
         this.get_Z = function ()
         {
-            var expr1 = Math.pow(this.R - this.Rk, 2),
+            var expr1 = Math.pow(this.R + this.Rk, 2),
                 expr2 = Math.pow(this.get_Xc() - this.get_Xl(), 2);
             return Math.sqrt(expr1 + expr2);
         };
@@ -115,8 +115,9 @@ var main = (function () {
         this.get_Q = function ()
         {
             var cos_fi = this.get_cos_fi(),
-                fi = Math.acos(cos_fi);
-            return Math.sin(fi);
+                cos_2_fi = Math.pow(cos_fi, 2),
+                sin_2_fi = 1 - cos_2_fi;
+            return Math.sqrt(sin_2_fi);
         };
 
         var result = {
