@@ -82,12 +82,12 @@ var main = (function () {
 
         this.get_Xc = function ()
         {
-            return 1.0 / this.get_Xl();
+            return 1/ (2 * Math.PI * this.data.f * this.c);
         };
 
         this.get_Xl = function ()
         {
-            return 2 * Math.PI * this.data.f * this.c;
+            return 2 * Math.PI * this.data.f * this.L;
         };
 
         this.get_Z = function ()
