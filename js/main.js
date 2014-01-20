@@ -99,7 +99,7 @@ var main = (function () {
 
         this.get_cos_fi = function ()
         {
-            return this.c + this.Rk / this.get_Z();
+            return (this.get_R() + this.Rk) / this.get_Z();
         };
 
         this.get_S = function ()
